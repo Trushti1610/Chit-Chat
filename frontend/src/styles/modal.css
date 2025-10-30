@@ -1,0 +1,182 @@
+/* Profile Modal Styles */
+.modal-content {
+  max-width: 400px;
+  width: 100%;
+  background: rgba(120, 77, 160, 0.6);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: white;
+}
+.modal-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 13px;
+}
+
+.modal-title {
+  font-family: "Manrope SemiBold";
+  color: white;
+  font-size: 20px;
+}
+
+.btn-close {
+  filter: brightness(0) invert(1);
+}
+
+.form-label {
+  color: rgba(255, 255, 255, 0.9);
+  font-family: "Manrope Medium";
+}
+
+.profile-modal .form-control {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.profile-modal .form-control:focus {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #a16fde;
+  box-shadow: 0 0 0 0.2rem rgba(161, 111, 222, 0.25);
+}
+
+.profile-modal .btn-primary {
+  background: linear-gradient(90deg, #a16fde, #7b4db3);
+  border: none;
+  font-family: "Manrope Medium";
+  transition: all 0.3s ease;
+}
+
+.profile-modal .btn-primary:hover {
+  background: linear-gradient(90deg, #b17fef, #8b5dc3);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(161, 111, 222, 0.3);
+}
+
+.profile-modal .btn-secondary {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  font-family: "Manrope Medium";
+  transition: all 0.3s ease;
+}
+
+.profile-modal .btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.profile-pic-container {
+  position: relative;
+  width: 75px;
+  height: 75px;
+  margin: 0 auto;
+  cursor: pointer;
+  border-radius: 50%;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.profile-pic-container:hover .profile-pic-overlay {
+  opacity: 1;
+}
+
+.profile-pic-large {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+.profile-pic-container:hover .profile-pic-large {
+  transform: scale(1.1);
+}
+
+.profile-pic-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.profile-pic-overlay i {
+  color: white;
+  font-size: 24px;
+}
+
+.selected-users {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  /* padding: 8px; */
+  /* background: rgba(255, 255, 255, 0.05); */
+  border-radius: 8px;
+  /* min-height: 40px; */
+  margin-bottom: 10px;
+}
+
+.user-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 12px;
+  background: rgba(161, 111, 222, 0.2);
+  border: 1px solid rgba(161, 111, 222, 0.3);
+  border-radius: 20px;
+  color: white;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.user-badge:hover {
+  background: rgba(161, 111, 222, 0.3);
+  transform: translateY(-1px);
+}
+
+.badge-name {
+  font-family: "Manrope Medium";
+}
+
+.badge-close-icon {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.badge-close-icon:hover {
+  color: white;
+  transform: scale(1.1);
+}
+
+.group-search-input {
+  width: 100%;
+  padding: 8px 40px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+  font-size: 16px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+.add-user-btn {
+  background: linear-gradient(90deg, #a16fde, #7b4db3);
+  border: none;
+  font-family: "Manrope Medium";
+  color: white;
+  font-weight: 400;
+  transition: all 0.3s ease;
+  font-size: 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  padding: 8px;
+}
+.modal-backdrop {
+  z-index: 0;
+}

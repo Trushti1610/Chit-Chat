@@ -1,0 +1,268 @@
+.notification-container {
+  position: relative;
+}
+
+.notification-badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: linear-gradient(90deg, #a16fde, #7b4db3);
+  color: white;
+  border-radius: 50%;
+  padding: 2px 8px;
+  font-size: 13px;
+  font-family: "Manrope Bold";
+  font-weight: 400;
+  min-width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(123, 77, 179, 0.18);
+  border: 2px solid #fff;
+  animation: pulse 1.2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.12);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.notification-dropdown {
+  position: absolute;
+  top: 110%;
+  right: 0;
+  max-width: 280px;
+  /* max-width: 90vw; */
+  max-height: 80vh;
+  background: rgba(120, 77, 160, 0.6);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(123, 77, 179, 0.25),
+    0 1.5px 6px rgba(94, 16, 189, 0.285);
+  z-index: 1000;
+  margin-top: 10px;
+  padding: 12px;
+  font-family: "Manrope Medium";
+  color: #fff;
+  border: 1.5px solid rgba(161, 111, 222, 0.3);
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.notification-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 12px 8px 12px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid rgba(161, 111, 222, 0.2);
+}
+
+.notification-item {
+  display: flex;
+  align-items: flex-start;
+  padding: 12px;
+  margin: 8px 0;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(161, 111, 222, 0.1);
+}
+
+.notification-item:hover {
+  background: rgba(161, 111, 222, 0.15);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(161, 111, 222, 0.2);
+}
+
+.notification-avatar {
+  width: 44px;
+  height: 44px;
+  margin-right: 14px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #a16fde;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(161, 111, 222, 0.2);
+  transition: all 0.3s ease;
+}
+
+.notification-item:hover .notification-avatar {
+  transform: scale(1.05);
+  border-color: #b17fef;
+}
+
+.notification-avatar img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.notification-content {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+
+.notification-content .d-flex {
+  display: flex;
+  justify-content: space-between; 
+  align-items: flex-end;
+  width: 100%;
+}
+
+.notification-title {
+  font-family: "Manrope SemiBold";
+  font-size: 1rem;
+  color: #fff;
+  margin: 0;
+  letter-spacing: 0.2px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  white-space: nowrap;
+}
+
+.notification-message {
+  color: #e0d6f7;
+  font-size: 0.9rem;
+  font-family: "Manrope Medium";
+  margin: 0;
+  line-height: 1.4;
+  opacity: 0.9;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex-grow: 1; 
+  min-width: 0; 
+}
+
+.notification-time {
+  font-size: 0.8rem;
+  color: #a16fde;
+  font-family: "Manrope";
+  margin-top: 0; 
+  margin-left: 8px; 
+  letter-spacing: 0.1px;
+  opacity: 0.8;
+  flex-shrink: 0; 
+}
+
+.no-notifications {
+  padding: 24px 0;
+  text-align: center;
+  color: #a16fde;
+  font-family: "Manrope SemiBold";
+  font-size: 1rem;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.no-notifications i {
+  font-size: 32px;
+  opacity: 0.5;
+}
+
+.notification-dropdown::-webkit-scrollbar {
+  width: 6px;
+  background: rgba(58, 23, 99, 0.3);
+  border-radius: 8px;
+}
+
+.notification-dropdown::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #a16fde 0%, #7b4db3 100%);
+  border-radius: 8px;
+}
+
+.notification-dropdown::-webkit-scrollbar-thumb:hover {
+  background: #a16fde;
+}
+.notification-toggle-btn {
+  background: transparent;
+  border: none;
+  color: #a16fde;
+  padding: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+}
+
+.notification-toggle-btn:hover {
+  background: rgba(161, 111, 222, 0.15);
+  color: #fff;
+  transform: scale(1.1);
+}
+
+.notification-toggle-btn i {
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.notification-toggle-btn:hover i {
+  transform: rotate(-15deg);
+}
+
+
+@media screen and (max-width: 480px) {
+  .notification-dropdown {
+    min-width: 250px;
+    right: -10px;
+    padding: 8px;
+  }
+
+  .notification-item {
+    padding: 10px;
+  }
+
+  .notification-avatar {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .notification-dropdown {
+    min-width: 220px;
+    right: -15px;
+  }
+
+  .notification-title {
+    font-size: 0.9rem;
+  }
+
+  .notification-message {
+    font-size: 0.85rem;
+  }
+}
+
+
