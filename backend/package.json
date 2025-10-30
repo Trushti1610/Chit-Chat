@@ -1,0 +1,29 @@
+{
+  "name": "chitchat",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "author": "trushti sangani",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@popperjs/core": "^2.11.8",
+    "bcryptjs": "^3.0.2",
+    "bootstrap": "^5.3.5",
+    "bootstrap-icons": "^1.11.3",
+    "colors": "^1.4.0",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "express-async-handler": "^1.2.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.13.2",
+    "multer": "^1.4.5-lts.2",
+    "nodemon": "^3.1.9",
+    "react-notification-badge": "^1.5.1",
+    "socket.io": "^4.8.1",
+    "start": "^5.1.0",
+    "twilio": "^5.5.2"
+  }
+}
